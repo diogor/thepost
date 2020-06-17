@@ -33,6 +33,8 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ['127.0.0.1', 'localhost'], subcast=st
 
 # Application definition
 
+AUTH_USER_MODEL = 'core.User'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
