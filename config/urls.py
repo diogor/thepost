@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
 from apps.core.views import Index
 from apps.post.views import PostDetail
 
@@ -24,6 +24,7 @@ urlpatterns = [
     path('', Index.as_view()),
     path('<slug:slug>', PostDetail.as_view(), name='post'),
     path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(
         settings.STATIC_URL, document_root=settings.STATIC_ROOT
     ) + static(

@@ -34,6 +34,8 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ['127.0.0.1', 'localhost'], subcast=st
 # Application definition
 
 AUTH_USER_MODEL = 'core.User'
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_FILENAME_GENERATOR = 'config.utils.make_filename'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'taggit',
+    'ckeditor',
+    'ckeditor_uploader',
     'apps.post',
     'apps.core',
 ]

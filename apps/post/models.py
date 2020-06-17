@@ -1,6 +1,7 @@
 import hashlib
 from django.db import models
 from django.conf import settings
+from ckeditor_uploader.fields import RichTextUploadingField
 from taggit.managers import TaggableManager
 from apps.core.models import Tag
 
@@ -19,7 +20,7 @@ class Post(models.Model):
     lerd = models.CharField(max_length=300)
     slug = models.SlugField("link", unique=True)
     imagem_destaque = models.ImageField(upload_to=upload_directory_path)
-    texto = models.TextField()
+    texto = RichTextUploadingField()
     tags = TaggableManager(through=Tag)
     destaque = models.BooleanField(default=False)
     created_at = models.DateTimeField("criado", auto_now_add=True)
