@@ -83,7 +83,7 @@
       <nav class="flex flex-wrap list-none -mb-1">
       {% for t in tags %}
         <li class="lg:w-1/3 mb-1 w-1/2">
-          <a href="/tag/{{t.slug}}/" class="text-gray-600 hover:text-gray-800">{{t.name|title}}</a>
+          <a href="{% url 'posts' t.slug %}" class="text-gray-600 hover:text-gray-800">{{t.name|title}}</a>
         </li>
       {% endfor %}
       </nav>

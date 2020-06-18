@@ -18,12 +18,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 from apps.core.views import Index
-from apps.post.views import PostDetail
+from apps.post.views import PostDetail, PostListTag
 
 urlpatterns = [
     path('', Index.as_view()),
-    path('<slug:slug>', PostDetail.as_view(), name='post'),
     path('admin/', admin.site.urls),
+    path('posts/<slug:tag>', PostListTag.as_view(), name='posts'),
+    path('<slug:slug>', PostDetail.as_view(), name='post'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(
         settings.STATIC_URL, document_root=settings.STATIC_ROOT

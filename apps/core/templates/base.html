@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{% static 'css/tailwind.min.css' %}" rel="stylesheet">
     <title>{% block title %}The Post{% endblock %}</title>
 </head>
 <body>
     {% block header %}
     <header class="text-gray-700 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                 <img style="height: 30px;" src="{% static 'img/logo.svg' %}" title="The Post" />
                 <span class="ml-3 text-xl">The Post</span>
             </a>
