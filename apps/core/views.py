@@ -12,7 +12,7 @@ class Index(TemplateView):
         tags = TagWithHits.objects.all()[:10]
 
         def destaque_tags():
-            for t in tags[:3]:
+            for t in tags:
                 try:
                     post = Post.objects.filter(
                         tags__slug=t.slug
