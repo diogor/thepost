@@ -12,8 +12,11 @@ class Index(TemplateView):
 
         def destaque_tags():
             for t in tags[:3]:
-                post = Post.objects.filter(tags__slug=t.slug).latest()
-                yield post
+                try:
+                    post = Post.objects.filter(tags__slug=t.slug).latest()
+                    yield post
+                except Post.DoesNotExist:
+                    pass
 
         context.update({
             'destaques': Post.objects.filter(destaque=True)[:2],
