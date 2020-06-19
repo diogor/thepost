@@ -15,6 +15,7 @@ Crie um arquivo ```.env``` e edite de acordo com as suas necessidades, ex:
 DATABASE_URL=postgres://thepost@localhost/thepost
 ALLOWED_HOSTS=127.0.0.1,thepost.exemplo.com.br
 DEBUG=false
+CACHE_SECONDS=120
 ```
 
 Crie o banco de dados e os arquivos estáticos:
