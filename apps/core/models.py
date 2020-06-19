@@ -20,6 +20,8 @@ class TagWithHits(TagBase):
 
     class Meta:
         ordering = ['hits']
+        verbose_name = "Tag"
+        verbose_name_plural = "Tags"
 
 
 class Tag(GenericTaggedItemBase):

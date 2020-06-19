@@ -2,6 +2,7 @@
 {% load humanize %}
 
 {% block destaque %}
+{% if destaques.0 %}
 <section class="text-gray-700 body-font">
   <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
@@ -21,6 +22,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 {% endblock %}
 
 {% block recentes %}
@@ -28,6 +30,7 @@
   <div class="container px-5 py-8 mx-auto">
     <div class="flex flex-wrap -m-4">
   {% for p in destaque_tags %}
+  {% if p.slug %}
       <div class="p-4 lg:w-1/3">
         <div class="h-full bg-gray-200 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
           <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
@@ -44,6 +47,7 @@
           </a>
         </div>
       </div>
+    {% endif %}
     {% endfor %}
     </div>
   </div>
@@ -51,19 +55,18 @@
 {% endblock %}
 
 {% block categorias %}
+{% if destaques.1 %}
 <section class="text-gray-700 body-font">
   <div class="container flex flex-wrap px-5 py-2 mx-auto items-center">
     <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-300">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">{{destaques.1.titulo}}</h1>
       <p class="leading-relaxed text-base">{{destaques.1.lerd}}</p>
       <p class="italic text-sm">{{destaques.1.created_at|naturaltime}}</p>
-      {% if destaques.1 %}
       <a href="{% url 'post' destaques.1.slug %}" class="text-indigo-500 inline-flex items-center mt-4">Ver mais
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
       </a>
-      {% endif %}
     </div>
     <div class="flex flex-col md:w-1/2 md:pl-12">
       <h2 class="title-font font-medium text-gray-800 tracking-widest text-sm mb-3">TAGS</h2>
@@ -77,4 +80,5 @@
     </div>
   </div>
 </section>
+{% endif %}
 {% endblock %}
