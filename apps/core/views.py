@@ -24,6 +24,6 @@ class Index(TemplateView):
         context.update({
             'destaques': destaques,
             'tags': tags,
-            'destaque_tags': [p for p in destaque_tags()] 
+            'destaque_tags': [p for p in destaque_tags()][:3]
         })
         return context
