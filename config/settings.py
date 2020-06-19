@@ -36,7 +36,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ['127.0.0.1', 'localhost'], subcast=st
 AUTH_USER_MODEL = 'core.User'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_FILENAME_GENERATOR = 'config.utils.make_filename'
-CACHE_MIDDLEWARE_SECONDS = 60 * 2
+CACHE_MIDDLEWARE_SECONDS = env.int("CACHE_SECONDS", 5)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
