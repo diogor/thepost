@@ -139,21 +139,18 @@ MEDIA_URL = env.str('MEDIA_URL', '/media/')
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'full',
+        'toolbar': 'default',
         'extraPlugins': ','.join([
             'uploadimage', # the upload image feature
             # your extra plugins here
             'div',
             'autolink',
             'autoembed',
-            'embedsemantic',
             'autogrow',
             'widget',
             'lineutils',
-            'clipboard',
             'dialog',
             'dialogui',
-            'elementspath'
         ]),
     }
 }
