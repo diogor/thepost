@@ -136,3 +136,24 @@ STATIC_ROOT = env.str('STATIC_ROOT', os.path.join(BASE_DIR, 'staticfiles'))
 STATIC_URL = env.str('STATIC_URL', '/static/')
 MEDIA_ROOT = env.str('MEDIA_ROOT', os.path.join(BASE_DIR, 'media'))
 MEDIA_URL = env.str('MEDIA_URL', '/media/')
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'extraPlugins': ','.join([
+            'uploadimage', # the upload image feature
+            # your extra plugins here
+            'div',
+            'autolink',
+            'autoembed',
+            'embedsemantic',
+            'autogrow',
+            'widget',
+            'lineutils',
+            'clipboard',
+            'dialog',
+            'dialogui',
+            'elementspath'
+        ]),
+    }
+}
