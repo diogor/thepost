@@ -4,10 +4,10 @@ Sistema de blog/news site baseado em Django
 
 # Instalação
 ## Requisitos
-- pipenv (https://github.com/pypa/pipenv)
+- poetry (https://python-poetry.org/docs/)
 
 ## Instalação
-- ```pipenv install```
+- ```poetry install```
 
 ## Configuração
 Crie um arquivo ```.env``` e edite de acordo com as suas necessidades, ex:
@@ -20,13 +20,13 @@ CACHE_SECONDS=120
 
 Crie o banco de dados e os arquivos estáticos:
 ```bash
-pipenv run python manage.py migrate
-pipenv run python manage.py collectstatic
+poetry run python manage.py migrate
+poetry run python manage.py collectstatic
 ```
 
 Crie um usuário administrador:
 ```bash
-pipenv run python manage.py createsuperuser
+poetry run python manage.py createsuperuser
 ```
 
 Vá até ```/admin/``` para logar com seu usuário admin.
