@@ -72,7 +72,7 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "3.2.11"
+version = "3.2.12"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -335,7 +335,7 @@ python-versions = ">=3.6"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "427a5b7bb331970fb607f529978658696637948b5c2e3d590d8a5b841ee02933"
+content-hash = "401edc60d0fa8b740e4192badc5797c6e7f1a091822d35489a3f7d8d93dfae46"
 
 [metadata.files]
 asgiref = [
@@ -363,8 +363,8 @@ dj-email-url = [
     {file = "dj_email_url-1.0.4-py2.py3-none-any.whl", hash = "sha256:5a0239560c75749be0de86f17425d4526938fe4d8f3ddff4aa8f98224e44183e"},
 ]
 django = [
-    {file = "Django-3.2.11-py3-none-any.whl", hash = "sha256:0a0a37f0b93aef30c4bf3a839c187e1175bcdeb7e177341da0cb7b8194416891"},
-    {file = "Django-3.2.11.tar.gz", hash = "sha256:69c94abe5d6b1b088bf475e09b7b74403f943e34da107e798465d2045da27e75"},
+    {file = "Django-3.2.12-py3-none-any.whl", hash = "sha256:9b06c289f9ba3a8abea16c9c9505f25107809fb933676f6c891ded270039d965"},
+    {file = "Django-3.2.12.tar.gz", hash = "sha256:9772e6935703e59e993960832d66a614cf0233a1c5123bc6224ecc6ad69e41e2"},
 ]
 django-appconf = [
     {file = "django-appconf-1.0.5.tar.gz", hash = "sha256:be3db0be6c81fa84742000b89a81c016d70ae66a7ccb620cdef592b1f1a6aaa4"},
@@ -385,6 +385,7 @@ django-compressor = [
 django-js-asset = [
     {file = "django-js-asset-1.2.2.tar.gz", hash = "sha256:c163ae80d2e0b22d8fb598047cd0dcef31f81830e127cfecae278ad574167260"},
     {file = "django_js_asset-1.2.2-py2.py3-none-any.whl", hash = "sha256:8ec12017f26eec524cab436c64ae73033368a372970af4cf42d9354fcb166bdd"},
+    {file = "django_js_asset-1.2.2-py3-none-any.whl", hash = "sha256:c2e967ddf7d99cc7ec75617d7d41edb469c7776518fae879c96ad2d9b53bad14"},
 ]
 django-sass-processor = [
     {file = "django-sass-processor-1.1.tar.gz", hash = "sha256:16ae2116cbf174dbd1dc034b18b5a0abe7b0bb5fda20c33e9f710d47010ec972"},
@@ -410,6 +411,7 @@ libsass = [
     {file = "libsass-0.21.0-cp36-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:e2b1a7d093f2e76dc694c17c0c285e846d0b0deb0e8b21dc852ba1a3a4e2f1d6"},
     {file = "libsass-0.21.0-cp36-abi3-win32.whl", hash = "sha256:abc29357ee540849faf1383e1746d40d69ed5cb6d4c346df276b258f5aa8977a"},
     {file = "libsass-0.21.0-cp36-abi3-win_amd64.whl", hash = "sha256:659ae41af8708681fa3ec73f47b9735a6725e71c3b66ff570bfce78952f2314e"},
+    {file = "libsass-0.21.0-cp38-abi3-macosx_12_0_arm64.whl", hash = "sha256:c9ec490609752c1d81ff6290da33485aa7cb6d7365ac665b74464c1b7d97f7da"},
     {file = "libsass-0.21.0.tar.gz", hash = "sha256:d5ba529d9ce668be9380563279f3ffe988f27bc5b299c5a28453df2e0b0fbaf2"},
 ]
 marshmallow = [
