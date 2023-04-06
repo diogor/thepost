@@ -18,10 +18,8 @@ class PostDetail(DetailView):
         posts = Post.objects.filter(
             tags__slug__in=[t.slug for t in post.tags.all()]
         ).exclude(id=post.id)[:3]
-        
-        context.update({
-            'related_posts': posts
-        })
+
+        context.update({"related_posts": posts})
         return context
 
 
@@ -31,7 +29,7 @@ class PostListTag(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        tag = self.kwargs.get('tag')
+        tag = self.kwargs.get("tag")
         if tag:
             tag_obj = TagWithHits.objects.get(slug=tag)
             tag_obj.hits = tag_obj.hits + 1

@@ -5,10 +5,12 @@ from taggit.models import TagBase, GenericTaggedItemBase
 
 
 def upload_directory_path(instance, filename):
-    return 'users/{}/{}.{}'.format(
-        instance.username, hashlib.sha224(filename.encode()).hexdigest(),
-        filename.split(".")[-1:]
+    return "users/{}/{}.{}".format(
+        instance.username,
+        hashlib.sha224(filename.encode()).hexdigest(),
+        filename.split(".")[-1:],
     )
+
 
 class User(AbstractUser):
     apresentacao = models.CharField(max_length=120)
@@ -19,7 +21,7 @@ class TagWithHits(TagBase):
     hits = models.IntegerField(default=0)
 
     class Meta:
-        ordering = ['hits']
+        ordering = ["hits"]
         verbose_name = "Tag"
         verbose_name_plural = "Tags"
 

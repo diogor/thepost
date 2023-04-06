@@ -14,16 +14,20 @@ class Index(TemplateView):
         def destaque_tags():
             for t in tags:
                 try:
-                    post = Post.objects.filter(
-                        tags__slug=t.slug
-                    ).exclude(id__in=[p.id for p in destaques]).latest()
+                    post = (
+                        Post.objects.filter(tags__slug=t.slug)
+                        .exclude(id__in=[p.id for p in destaques])
+                        .latest()
+                    )
                     yield post
                 except Post.DoesNotExist:
                     pass
 
-        context.update({
-            'destaques': destaques,
-            'tags': tags,
-            'destaque_tags': [p for p in destaque_tags()][:3]
-        })
+        context.update(
+            {
+                "destaques": destaques,
+                "tags": tags,
+                "destaque_tags": [p for p in destaque_tags()][:3],
+            }
+        )
         return context
