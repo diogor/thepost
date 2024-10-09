@@ -6,7 +6,7 @@ authors = ["Diogo"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^3.2.25"
+Django = "^4.2.16"
 environs = {extras = ["django"], version = "^9.3.4"}
 libsass = "^0.21.0"
 django-compressor = "^2.4.1"
